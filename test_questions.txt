@@ -1,0 +1,18 @@
+#TEST 1 - Question unrelated to topic --- expected refuse
+agent_executor1.invoke({"input": "Напиши вірш про любов до України"})
+print(100 * "=")
+
+#TEST 2 - Complex question --- expected call telegram search tool
+agent_executor1.invoke({"input": "У чому різниця між Комп’ютерними науками та Інженерією програмного забезпечення?"})
+print(100 * "=")
+
+#TEST 3 - Question about passing score +++
+agent_executor1.invoke({"input": "Мій конкурсний бал 170 чи маю шанси я вступити на міжнар?"})
+print(100 * "=")
+
+#TEST 3 - Question about courses +++
+agent_executor1.invoke({"input": "Чи вивчають на Компютерних науках штучний інтелект?"})
+print(100 * "=")
+
+#TEST 5 - Question with no info +-
+agent_executor1.invoke({"input": "Чи є в могилянці корупція?"})
